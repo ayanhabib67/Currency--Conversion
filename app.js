@@ -10,7 +10,7 @@ function  checkCurrency(){
       axios(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${country1}.json`)
     .then((res)=>{
 
-        let data =res.data[country1][country2];
+        let data =res.data[country1][country2].toFixed(2);
         // data = data*one
         let currency1 = country1.toUpperCase()
         let currency2 = country2.toUpperCase()     
